@@ -1,15 +1,20 @@
 <!DOCTYPE html>
+<!-- 
+Main html document for Park It app
+-->
 <html>
     <head>
         <title>Park It</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="ParkIt.css" />
     </head>
     <body>
         <div id="navbar">
             <button id="park" onclick="setParkingLocation()">Park</button>
             Park It
             <button id="retrieve" onclick="getParkingLocation()">Find</button>
+            <div class="clear"></div>
         </div>
         <div id="container">
             <div id="instructions">
