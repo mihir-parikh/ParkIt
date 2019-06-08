@@ -8,7 +8,7 @@ Park It Stylsheet
 
 /* Global */
 body {
-    font-size: 16pt;
+    font-size: 12pt;
 }
 button {
     padding: 5px 10px;
@@ -20,7 +20,7 @@ button {
 div#navbar {
     width: 100%;
     padding: 10px 0px;
-    font-size: 1.4em;
+    font-size: 1.6em;
     /* Park It text alignment = center */
     text-align: center;
     position: fixed;
