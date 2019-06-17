@@ -1,0 +1,40 @@
+/*
+IOS specific stylesheet for Park It
+*/
+/* 
+    Created on : 08/06/2019, 12:06:04 PM
+    Author     : Mihir
+*/
+
+/* Global */
+body {
+    /* IOS default font */
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    background-color: white;
+}
+button {
+    border: none;
+    background-color: white;
+    color: #0080ff;
+}
+
+/* Nav bar */
+div#navbar {
+    /* IOS default background colour */
+    background-color: white;
+    color: black;
+}
+
+/* Container */
+#instructions, #map, #directions {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+/* Instructions */
+#gotIt {
+    background-color: #0080ff;
+    color: white;
+    border-radius: 5px;
+}
