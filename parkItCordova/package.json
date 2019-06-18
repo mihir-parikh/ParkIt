@@ -13,7 +13,9 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
+    "cordova-android": "^8.0.0",
     "cordova-browser": "^6.0.0",
+    "cordova-ios": "^5.0.1",
     "cordova-plugin-dialogs": "2.0.1",
     "cordova-plugin-geolocation": "4.0.1",
     "cordova-plugin-statusbar": "2.4.2"
@@ -26,7 +28,9 @@
       "cordova-plugin-whitelist": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android",
+      "ios"
     ]
   },
   "devDependencies": {

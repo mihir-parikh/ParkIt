@@ -120,3 +120,62 @@ function showParkingLocation() {
     
     setCSS('map', 'visibility', 'visible');
 }
+
+/**
+ * Get the stored parking location from local storage
+ * 
+ * @returns {undefined}
+ */
+function getParkingLocation() {
+    navigator.geolocation.getCurrentPosition(getParkingLocationSuccess, locationError, {enableHighAccuracy: true});
+}
+
+/**
+ * Success callback for getParkingLocation()
+ * 
+ * Fetches the current location & parking location (from local storage)
+ * 
+ * @param Position position
+ * @returns {undefined}
+ */
+function getParkingLocationSuccess(position) {
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+    parkedLatitude = storage.getItem('parkedLatitude');
+    parkedLongitude = storage.getItem('parkedLongitude');
+    showDirection();
+}
+
+function showDirection() {
+    // Object drawing directions on a map
+    var dRenderer = new google.maps.DirectionsRenderer;
+    // Object to calculate route/directions
+    var dService = new google.maps.DirectionsService;
+    var curLatLong = new google.maps.LatLng(latitude, longitude);
+    var parkedLatLong = new google.maps.LatLng(parkedLatitude, parkedLongitude);
+    // Create a map on this div
+    var map = new google.maps.Map(document.getElementById('map'));
+    map.setZoom(16);
+    map.setCenter(curLatLong);
+    // Calculate the route
+    dService.route({
+        origin: curLatLong,
+        destination: parkedLatLong,
+        travelMode: 'DRIVING'
+    }, function(response, status) {
+        if(status == 'OK') {
+            // The drawing object will draw this directions
+            dRenderer.setDirections(response);
+            document.getElementById('directions').innerHTML = '';
+            // Draw on to this panel/div
+            dRenderer.setPanel(document.getElementById('directions'));
+        }
+        else {
+            navigator.notification.alert('Directions failed due to: ' + status);
+        }
+    });
+    
+    setCSS('instructions', 'display', 'none');
+    setCSS('map', 'visibility', 'visible');
+    setCSS('directions', 'visibility', 'visible');
+}

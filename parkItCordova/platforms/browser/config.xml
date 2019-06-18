@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.mihir1408.parkit" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ParkIt</name>
+    <name>Park It</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A simple app that remembers location of your parking and shows you directions to the carpark from current location when needed.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="mihir1408@gmail.com" href="http://cordova.io">
+        Mihir Parikh
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -15,4 +15,10 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="target-device" value="handset" />
+    <preference name="deployment-target" value="7.0" />
+    <preference name="SuppressLongPressGesture" value="true" />
+    <preference name="Suppress3DTouchGesture" value="true" />
+    <preference name="InAppBrowserStorageEnabled" value="true" />
 </widget>

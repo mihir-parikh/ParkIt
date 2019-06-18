@@ -1,11 +1,12 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "ParkIt",
-  "short_name": "ParkIt",
+  "name": "Park It",
+  "short_name": "Park It",
   "version": "com.mihir1408.parkit",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "description": "A simple app that remembers location of your parking and shows you directions to the carpark from current location when needed.",
+  "author": "Mihir Parikh",
   "icons": [],
+  "orientation": "portrait",
   "start_url": "index.html"
 }

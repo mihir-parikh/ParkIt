@@ -1,26 +1,40 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.mihir1408.parkit" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ParkIt</name>
+    <name>Park It</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A simple app that remembers location of your parking and shows you directions to the carpark from current location when needed.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="mihir1408@gmail.com" href="http://cordova.io">
+        Mihir Parikh
     </author>
+    <!-- Entrypoint of the application/Main page -->
     <content src="index.html" />
+    <!-- Whitelist plugin. It allows you to control what resources your cordova app can navigate to -->
     <plugin name="cordova-plugin-whitelist" spec="1" />
+    <!-- Set of domains your Cordova app can communicate with -->
     <access origin="*" />
+    <!-- Which URLs the app is allowed to open -->
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <!-- Android platform specific configurations -->
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+    <!-- iOS platform specific configurations -->
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <preference name="Orientation" value="portrait" />
+    <!-- Target device is handset only, not tablets -->
+    <preference name="target-device" value="handset" />
+    <!-- The least supported iOS version = 7.0 -->
+    <preference name="deployment-target" value="7.0" />
+    <preference name="SuppressLongPressGesture" value="true" />
+    <preference name="Suppress3DTouchGesture" value="true" />
+    <preference name="InAppBrowserStorageEnabled" value="true" />
 </widget>

@@ -1,0 +1,86 @@
+/*
+Park It Stylsheet
+*/
+/* 
+    Created on : 08/06/2019, 10:05:35 AM
+    Author     : Mihir
+*/
+
+/* Global */
+body {
+    font-size: 12pt;
+}
+button {
+    padding: 5px 10px;
+    margin: 0px 15px;
+    font-size: large;
+}
+
+/* Nav bar */
+div#navbar {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 1.6em;
+    /* Park It text alignment = center */
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* Always visible */
+    z-index: 10;
+}
+button#park {
+    float: left;    
+}
+button#retrieve {
+    float: right;
+}
+div.clear {
+    /* Clear the mess created by floating elements. I.e. div will not have floating 
+    elements on left or right side. */
+    clear: both;
+}
+
+/* Container */
+#container {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+}
+
+/* Instructions */
+div#instructions {
+    /* Positioned relative to the parent - container */
+    position: relative;
+    width: 90%;
+    /* Centered from left & right */
+    margin: 10px auto;
+    padding: 5px;
+}
+
+/* Map */
+div#map {
+    /* Positioned relative to the direct parent - container */
+    position: relative;
+    height: 320px;
+    width: 90%;
+    max-width: 320px;
+    /* Positioned center horizontically */
+    margin: 15px auto;
+    padding: 0px 10x;
+    visibility: hidden;
+}
+
+/* Directions */
+div#directions {
+    /* Positioned relative to the direct parent - container */
+    position: relative;
+    height: auto;
+    width: 90%;
+    max-width: 320px;
+    /* Positioned center horizontically */
+    margin: 15px auto;
+    padding: 10px 10x;
+    visibility: hidden;
+}

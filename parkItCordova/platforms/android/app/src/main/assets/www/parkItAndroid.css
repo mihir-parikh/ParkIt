@@ -1,0 +1,41 @@
+/*
+Android specific stylesheet for Park It
+*/
+/* 
+    Created on : 08/06/2019, 12:06:04 PM
+    Author     : Mihir
+*/
+
+/* Global */
+body {
+    /* Android default font */
+    font-family: Roboto, sans-serif;
+}
+button {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* Nav bar */
+div#navbar {
+    /* Android default background colour */
+    background-color: #2196f3;
+    color: white;
+    /* 3px top-bottom, 3px left-right, 5px blur */
+    box-shadow: darkgray 3px 3px 5px;
+}
+button#park, button#retrieve {
+    border: 1px solid white;
+}
+
+/* Container */
+/* Card-like effect */
+#instructions, #map, #directions {
+    box-shadow: darkgray 3px 3px 5px;
+    border: 1px solid black;
+}
+
+/* Instructions */
+#gotIt {
+    border: 1px solid black;
+}

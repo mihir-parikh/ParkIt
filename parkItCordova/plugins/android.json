@@ -1,0 +1,24 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.mihir1408.parkit"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.mihir1408.parkit"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.mihir1408.parkit"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.mihir1408.parkit"
+    }
+  },
+  "dependent_plugins": {}
+}
